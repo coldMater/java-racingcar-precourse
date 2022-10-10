@@ -9,7 +9,7 @@ public class Car {
     private String name;
 
     Car(String name) {
-        if (name.length() > 5) throw new IllegalArgumentException("[ERROR] 자동차의 이름이 5글자를 초과하였습니다. 5글자 이하의 자동차 이름을 입력해주세요. input:" + name);
+        if (name.length() > 5) throw new IllegalArgumentException("자동차의 이름이 5글자를 초과하였습니다. 5글자 이하의 자동차 이름을 입력해주세요. input:" + name);
         this.location = new Location();
         this.name = name;
     }

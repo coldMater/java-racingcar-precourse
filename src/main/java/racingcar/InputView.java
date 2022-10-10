@@ -16,6 +16,7 @@ public class InputView {
             }
             return carList;
         } catch (Exception e) {
+            System.out.println("[ERROR]" + e);
             return null;
         }
     }
@@ -24,6 +25,7 @@ public class InputView {
         try {
             return new MaxTurnCount(Integer.parseInt(Console.readLine()));
         } catch (Exception e) {
+            System.out.println("[ERROR]" + e);
             return null;
         }
     }
