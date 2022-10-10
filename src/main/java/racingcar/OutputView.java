@@ -1,5 +1,6 @@
 package racingcar;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OutputView {
@@ -29,5 +30,14 @@ public class OutputView {
             progressAsMinusSign.append("-");
         }
         return progressAsMinusSign.toString();
+    }
+
+    public static void printFinalResult(RacingState racingState) {
+        List<String> winnerNameList = new ArrayList<>();
+        for (Car car : racingState.winner) {
+            winnerNameList.add(car.getName());
+        }
+        System.out.println();
+        System.out.println("최종 우승자 : " + String.join(",", winnerNameList));
     }
 }

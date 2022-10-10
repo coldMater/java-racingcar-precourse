@@ -1,6 +1,5 @@
 package racingcar;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Application {
@@ -28,12 +27,6 @@ public class Application {
             OutputView.showGameState(carList);
         }
 
-        List<String> winner = new ArrayList<>();
-        for (Car car : carList) {
-            if (car.getLocation().getX() >= maxTurnCount.getMaxTurnCount()) winner.add(car.getName());
-        }
-
-        System.out.println();
-        System.out.println("최종 우승자 : " + String.join(",", winner));
+        OutputView.printFinalResult(racingState);
     }
 }
