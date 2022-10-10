@@ -27,13 +27,12 @@ public class Application {
         }
 
         OutputView.showGameState(carList);
-        String result = "최종우승자: ";
         List<String> winner = new ArrayList<>();
         for (Car car : carList) {
             if (car.getLocation().getX() >= maxTurnCount.getMaxTurnCount()) winner.add(car.getName());
         }
 
         System.out.println();
-        System.out.println("최종우승자: " + String.join(",", winner));
+        System.out.println("최종 우승자 : " + String.join(",", winner));
     }
 }

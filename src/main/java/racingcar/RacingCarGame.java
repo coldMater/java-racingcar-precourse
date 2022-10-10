@@ -15,13 +15,13 @@ class RacingCarGame {
         boolean isGameEnd = false;
         for (Car car : carList) {
             car.move();
-            isGameEnd = this.isGameEnd(car.getLocation(), this.maxTurnCount);
+            isGameEnd |= this.isGameEnd(car.getLocation(), this.maxTurnCount);
         }
         return isGameEnd;
     }
 
     private boolean isGameEnd(Location location, MaxTurnCount maxTurnCount) {
-        return location.getX() >= this.maxTurnCount.getMaxTurnCount();
+        return location.getX() >= maxTurnCount.getMaxTurnCount();
     }
 
     public List<Car> getCarList() {
