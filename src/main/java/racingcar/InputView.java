@@ -7,13 +7,14 @@ public class InputView {
     public static CarList readCarList() {
         CarList carList = new CarList();
         try {
-            String[] carNameArr = Console.readLine().split(",");
+            String read = Console.readLine();
+            String[] carNameArr = read.split(",");
             for (String carName : carNameArr) {
                 carList.add(new Car(carName));
             }
             return carList;
-        } catch (Exception e) {
-            System.out.println("[ERROR]" + e);
+        } catch (IllegalArgumentException e) {
+            System.out.println("[ERROR]" + e.getMessage());
             return null;
         }
     }
@@ -21,8 +22,8 @@ public class InputView {
     public static MaxTurnCount readMaxMovingCount() {
         try {
             return new MaxTurnCount(Integer.parseInt(Console.readLine()));
-        } catch (Exception e) {
-            System.out.println("[ERROR]" + e);
+        } catch (IllegalArgumentException e) {
+            System.out.println("[ERROR]" + e.getMessage());
             return null;
         }
     }
