@@ -7,8 +7,11 @@
   - public void moveForward()
 - class Car
   - private Location location
-  - constructor
+  - private String name
+  - constructor(String name)
     - 새로운 Location 생성 및 할당
+    - 이름 할당
+    - Car 이름 벨리데이션
   - public Location getLocation()
   - public void move()
 - RacingCarList
