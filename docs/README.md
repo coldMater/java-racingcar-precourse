@@ -16,6 +16,7 @@
   - public void move()
 - class MaxTurnCount
   - 최대 이동횟수를 받을 수 있는 래퍼클래스
+- CarList 객체 생성 (일급컬렉션)
 - RacingCarList
   - private List<Car> carList
   - constructor

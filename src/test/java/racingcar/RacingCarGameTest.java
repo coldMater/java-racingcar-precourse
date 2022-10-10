@@ -11,12 +11,12 @@ class RacingCarGameTest {
     @Test
     @DisplayName("자동차의 이름이 중복되었을 때 예외가 발생합니다.")
     void throwToIllegalCarName() {
-        List<String> carNameList = new ArrayList<>();
-        carNameList.add("하나");
-        carNameList.add("둘");
-        carNameList.add("셋");
-        carNameList.add("셋");
+        List<Car> carList = new ArrayList<>();
+        carList.add(new Car("하나"));
+        carList.add(new Car("둘"));
+        carList.add(new Car("셋"));
+        carList.add(new Car("셋"));
 
-        assertThrows(IllegalArgumentException.class, () -> new RacingCarGame(carNameList, new MaxTurnCount(1)));
+        assertThrows(IllegalArgumentException.class, () -> new RacingCarGame(carList, new MaxTurnCount(1)));
     }
 }
