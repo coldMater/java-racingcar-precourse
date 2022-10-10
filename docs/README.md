@@ -14,6 +14,8 @@
     - Car 이름 벨리데이션
   - public Location getLocation()
   - public void move()
+- class MaxTurnCount
+  - 최대 이동횟수를 받을 수 있는 래퍼클래스
 - RacingCarList
   - private List<Car> carList
   - constructor
