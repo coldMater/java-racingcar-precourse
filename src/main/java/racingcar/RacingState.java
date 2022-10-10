@@ -6,8 +6,8 @@ import java.util.List;
 public class RacingState {
     List<Car> winner = new ArrayList<>();
 
-    RacingState(List<Car> carList, MaxTurnCount maxTurnCount) {
-        carList.forEach((Car car) -> {
+    RacingState(CarList carList, MaxTurnCount maxTurnCount) {
+        carList.getCarList().forEach((Car car) -> {
             if (car.getLocation().getX() >= maxTurnCount.getMaxTurnCount()) {
                 winner.add(car);
             }

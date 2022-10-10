@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-        List<Car> carList = null;
+        CarList carList = null;
         MaxTurnCount maxTurnCount = null;
 
         while (carList == null) {

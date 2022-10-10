@@ -17,8 +17,8 @@ public class OutputView {
         System.out.println("실행 결과");
     }
 
-    public static void showGameState(List<Car> carList) {
-        for (Car car : carList) {
+    public static void showGameState(CarList carList) {
+        for (Car car : carList.getCarList()) {
             System.out.println(car.getName() + " : " + getProgressAsMinusSign(car.getLocation()));
         }
         System.out.println();

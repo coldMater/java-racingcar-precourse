@@ -2,13 +2,10 @@ package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class InputView {
 
-    public static List<Car> readCarList() {
-        List<Car> carList = new ArrayList<>();
+    public static CarList readCarList() {
+        CarList carList = new CarList();
         try {
             String[] carNameArr = Console.readLine().split(",");
             for (String carName : carNameArr) {
