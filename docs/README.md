@@ -1,0 +1,21 @@
+# TODO
+- class Location
+  - private int x
+  - constructor
+    - x 를 0으로 초기화
+  - public int getX()
+  - public void moveForward()
+- class Car
+  - private Location location
+  - constructor
+    - 새로운 Location 생성 및 할당
+  - public Location getLocation()
+  - public void move()
+- RacingCarList
+  - private List<Car> carList
+  - constructor
+    - car 이름 중복검사
+    - car 생성 및 carList 담기 
+  - public void turn()
+  - public List<Car> getCarList()
+  - public boolean isGameEnd()
