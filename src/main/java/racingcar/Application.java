@@ -22,11 +22,12 @@ public class Application {
 
         OutputView.showResult();
 
-        while (!racingCarGame.turnAndGetIsGameEnd()) {
+        RacingState racingState = new RacingState(carList, maxTurnCount);
+        while (!racingState.isRacingEnd()) {
+            racingState = racingCarGame.turnAndGetState();
             OutputView.showGameState(carList);
         }
 
-        OutputView.showGameState(carList);
         List<String> winner = new ArrayList<>();
         for (Car car : carList) {
             if (car.getLocation().getX() >= maxTurnCount.getMaxTurnCount()) winner.add(car.getName());
